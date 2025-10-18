@@ -15,8 +15,6 @@ def post_new_user(body):
                          json=body,
                          headers=data.headers)
 
-# Вызов функции post_new_user с телом запроса для создания нового пользователя из модуля data
-#response = post_new_user(data.user_body)
 
 # Вывод HTTP-статус кода ответа на запрос
 # Код состояния указывает на результат обработки запроса сервером
@@ -32,9 +30,6 @@ def post_new_client_kit(kit_body,auth_token):
     return requests.post(configuration.URL_SERVICE + configuration.CREATE_PRODUCTS_KITS_PATH,
                          json=kit_body,
                          headers=auth_headers)
-
-# Вызов функции с передачей списка kit_body продуктов из файла data.py и токена авторизации
-# response = post_new_client_kit(data.kit_body,data.headers["Authorization"])
 
 # Вывод HTTP-статус кода ответа и тела ответа в формате JSON
 # Это позволяет проверить успешность выполнения запроса и посмотреть результаты поиска наборов
